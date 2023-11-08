@@ -36,9 +36,10 @@
  |SSD1602|1.8.1|Software libre|
  |Arduino IDE|2.2.1|Software libre
  |Visual Studio Code (Platformio)|1.82.2|Software libre|
+ 
  ## Prototipo en dibujo
+ 
  - Fotografia del dibujo a mano alzada de tu personaje
- ## Comunicación 
  
  - <img width="500" alt="Prototipo" src = "https://github.com/FerFoess/Personaje_IoT/assets/135056080/ef39334a-33c5-4de8-b4f8-e465e5bca2f5"> 
 
@@ -47,6 +48,7 @@
  - Diagrama que contenga los sensores, los actuadores, el microcontrolador, el servidor.
  ## Base de Datos
  - Imagen tabla o tablas que usarias (Ej. Sensores, actuadores, en un modelo relacional)
+ - <img width="500" alt="Prototipo" src = "https://github.com/FerFoess/Personaje_IoT/assets/135056080/5c2dfd60-bcef-409b-8cd9-053258ea31e8"> 
 
 
    
