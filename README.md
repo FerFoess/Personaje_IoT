@@ -39,8 +39,8 @@
  ## Prototipo en dibujo
  - Fotografia del dibujo a mano alzada de tu personaje
  ## Comunicación 
- - <img width="200" alt="prototipo" src="https://github.com/FerFoess/Personaje_IoT/assets/135056080/f3b5a1bb-77c6-438b-9848-819039deab94">
- ![image](https://github.com/FerFoess/Personaje_IoT/assets/135056080/ef39334a-33c5-4de8-b4f8-e465e5bca2f5)
+ 
+ - <img width="500" alt="Prototipo" src = "https://github.com/FerFoess/Personaje_IoT/assets/135056080/ef39334a-33c5-4de8-b4f8-e465e5bca2f5"> 
 
 
  ## Arquitectura
