@@ -1,9 +1,7 @@
 # Personaje Navideño 
 
 ## Nombre del Personaje 
-- Árbol Navideño
-
-- Nombre del personaje
+- Muñeco de Nieve
 
 ## Integrantes
 - Fernando Martínez Rodríguez
@@ -42,6 +40,8 @@
  - Fotografia del dibujo a mano alzada de tu personaje
  
  - <img width="500" alt="Prototipo" src = "https://github.com/FerFoess/Personaje_IoT/assets/135056080/ef39334a-33c5-4de8-b4f8-e465e5bca2f5"> 
+
+
 
 
  ## Arquitectura
