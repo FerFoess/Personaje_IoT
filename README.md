@@ -45,7 +45,8 @@
 
  ## Arquitectura
 
- - ![image](https://github.com/FerFoess/Personaje_IoT/assets/135056080/e5c1be91-8a1e-48f7-b868-9a2255cf2114)
+ - ![image](https://github.com/FerFoess/Personaje_IoT/assets/135056080/d0acae8a-2e12-4b13-bc36-8f7681c6f052)
+
 
  - 
  ## Base de Datos
