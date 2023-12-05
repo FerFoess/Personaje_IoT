@@ -14,7 +14,7 @@
  
  |Nombre del componente|Descripción|Cantidad|Precio|
  |-|-|-|-|
- |ESP32|Microcontrolador con 30 pines con comunicación WiFi y Bluetooth|1|$140.00|
+ |ESP32|Microcontrolador con 30 pines con comunicación WiFi y Bluetooth|2|$140.00|
  |Cables Dupont|Cables para conexión de prototipos de purebas|50|$60.00|
  |Luces LED|Luces para la estetica del muñeco de nieve|5|$50.00|
  |Sensor|Sensor de proximidad|1|$60|
