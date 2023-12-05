@@ -73,33 +73,33 @@ from machine import Pin, PWM
 from time import sleep
 from hcsr04 import HCSR04
 
-# Definir pines para el control del motor
+- Definir pines para el control del motor
 motorIN1 = Pin(23, Pin.OUT)
 motorIN2 = Pin(22, Pin.OUT)
 
-# Configurar pines para los LEDs
+- Configurar pines para los LEDs
 led_pins = [33, 25, 26, 14, 27]
 leds = [Pin(pin, Pin.OUT) for pin in led_pins]
 
-# Configurar el sensor HC-SR04
+- Configurar el sensor HC-SR04
 sensor_trigger = Pin(12, Pin.OUT)
 sensor_echo = Pin(13, Pin.IN)
 sensor = HCSR04(trigger_pin=sensor_trigger, echo_pin=sensor_echo)
 
-# Configurar el buzzer
+- Configurar el buzzer
 buzzer_pin = 32
 buzzer = PWM(Pin(buzzer_pin))
 volumen = 800  # Ajusta el volumen según sea necesario (0 a 1023)
 buzzer.duty(volumen)
 
-# Función para reproducir un tono
+- Función para reproducir un tono
 def sonido(frecuencia, duracion):
     buzzer.freq(frecuencia)
     buzzer.duty(volumen)
     sleep(duracion)
     buzzer.duty(0)
 
-# Función para reproducir la melodía de Navidad con la estructura deseada
+- Función para reproducir la melodía de Navidad con la estructura deseada
 def reproducir_melodia_navidad():
     melodia_navidad = [
         (440, 0.6), (900, 0.6),
@@ -108,7 +108,7 @@ def reproducir_melodia_navidad():
     for frecuencia, duracion in melodia_navidad:
         sonido(frecuencia, duracion)
 
-# Número máximo de iteraciones antes de salir del bucle
+- Número máximo de iteraciones antes de salir del bucle
 max_iteraciones = 1000  # Puedes ajustar este valor según sea necesario
 
 iteracion_actual = 0
@@ -117,55 +117,55 @@ while iteracion_actual < max_iteraciones:
     # Incrementar el contador de iteraciones
     iteracion_actual += 1
 
-    # Medir la distancia
+    - Medir la distancia
     distancia = sensor.distance_cm()
 
-    # Imprimir la distancia
+    - Imprimir la distancia
     print("Distancia:", distancia, "cm")
 
-    # Si la distancia es menor a 100 cm, realizar las acciones
+    - Si la distancia es menor a 100 cm, realizar las acciones
     if distancia < 100:
-        # Avanzar
+        - Avanzar
         motorIN1.value(1)
         motorIN2.value(0)
         sleep(2)
 
-        # Detenerse
+        - Detenerse
         motorIN1.value(0)
         motorIN2.value(0)
 
-        # Encender los LEDs secuencialmente
+        - Encender los LEDs secuencialmente
         for led in leds:
             led.value(1)
             sleep(0.5)
             led.value(0)
 
-        # Retroceder
+        - Retroceder
         motorIN1.value(0)
         motorIN2.value(1)
         sleep(2)
 
-        # Detenerse nuevamente
+        - Detenerse nuevamente
         motorIN1.value(0)
         motorIN2.value(0)
 
-        # Apagar los LEDs
+        - Apagar los LEDs
         for led in leds:
             led.value(0)
 
-        # Reproducir la melodía de Navidad
+        - Reproducir la melodía de Navidad
         reproducir_melodia_navidad()
 
     else:
-        # Si la distancia es mayor a 100 cm, detener el motor y apagar los LEDs
+        - Si la distancia es mayor a 100 cm, detener el motor y apagar los LEDs
         motorIN1.value(0)
         motorIN2.value(0)
 
-        # Apagar los LEDs
+        - Apagar los LEDs
         for led in leds:
             led.value(0)
 
-# Detener el zumbador al salir del bucle
+- Detener el zumbador al salir del bucle
 buzzer.duty(0)
 
 
@@ -176,7 +176,7 @@ from time import sleep
 import network
 from umqtt.simple import MQTTClient
 
-# Definir las frecuencias para las notas musicales en Hz
+- Definir las frecuencias para las notas musicales en Hz
 D5 = 587
 E5 = 659
 F5 = 698
@@ -190,17 +190,17 @@ D6 = 1175
 
 reproduciendo_melodia = False
 
-# Configurar el pin del zumbador como PWM
+- Configurar el pin del zumbador como PWM
 buzzer = PWM(Pin(12))
 buzzer.duty(0)  # Inicializar el zumbador con un ciclo de trabajo del 0%
 
-# Función para iniciar una nota con una frecuencia específica
+- Función para iniciar una nota con una frecuencia específica
 def iniciar_nota(frecuencia):
     if frecuencia > 0:
         buzzer.freq(frecuencia)
         buzzer.duty(512)
 
-# Función para detener la nota
+- Función para detener la nota
 def detener_nota():
     buzzer.duty(0)
 
@@ -210,7 +210,7 @@ def detener_todo():
     reproduciendo_melodia = False
     apagar_leds()  # Apagar todos los LEDs    
 
-# Función encargada de encender el zumbador cuando llega un mensaje
+- Función encargada de encender el zumbador cuando llega un mensaje
 def llegada_mensaje(topic, msg):
     global reproduciendo_melodia
 
@@ -233,7 +233,7 @@ def llegada_mensaje(topic, msg):
         encender_leds()  # Encender LEDs
 
 
-# Función para reproducir una melodía
+- Función para reproducir una melodía
 def reproducir_melodia(melodia):
     for frecuencia, duracion in melodia:
         iniciar_nota(frecuencia)
@@ -241,17 +241,17 @@ def reproducir_melodia(melodia):
         detener_nota()
         sleep(0.1)
 
-# Función para encender todos los LEDs
+- Función para encender todos los LEDs
 def encender_leds():
     for led in leds:
         led.value(1)
 
-# Función para apagar todos los LEDs
+- Función para apagar todos los LEDs
 def apagar_leds():
     for led in leds:
         led.value(0)
 
-# Declarar función para conectarnos a WiFi
+- Declarar función para conectarnos a WiFi
 def conectar_wifi():
     print("Conectando...", end="")
     sta_if = network.WLAN(network.STA_IF)
@@ -262,13 +262,13 @@ def conectar_wifi():
         sleep(0.3)
     print("WiFi Connected!!")
 
-# Configurar pines para los LEDs
+- Configurar pines para los LEDs
 led_pins = [23, 22, 21, 19, 18]
 leds = [Pin(pin, Pin.OUT) for pin in led_pins]
 
-# Conectar a WiFi
+- Conectar a WiFi
 conectar_wifi()
-# Detalles de MQTT
+- Detalles de MQTT
 MQTT_BROKER = "broker.hivemq.com"
 MQTT_USER = ""
 MQTT_PASSWORD = ""
@@ -276,14 +276,14 @@ MQTT_CLIENT_ID = ""
 MQTT_TOPIC = "utng/fmr/led"
 MQTT_PORT = 1883
 
-# Subscribirse al broker MQTT
+- Subscribirse al broker MQTT
 client = MQTTClient(MQTT_CLIENT_ID, MQTT_BROKER, port=MQTT_PORT, user=MQTT_USER, password=MQTT_PASSWORD, keepalive=0)
 client.set_callback(llegada_mensaje)
 client.connect()
 client.subscribe(MQTT_TOPIC)
 print("Conectado a %s, en el topic %s" % (MQTT_BROKER, MQTT_TOPIC))
 
-# Melodía de "Jingle Bells"
+- Melodía de "Jingle Bells"
 melodia_jingle_bells = [
     (E5, 300), (E5, 300), (E5, 600),
     (E5, 300), (E5, 300), (E5, 600),
@@ -295,7 +295,7 @@ melodia_jingle_bells = [
     (B5, 300), (A5, 300), (G5, 1200)
 ]
 
-# Melodía de "We Wish You a Merry Christmas"
+- Melodía de "We Wish You a Merry Christmas"
 melodia_wish_you_merry_christmas = [
     (G5, 500), (G5, 500), (A5, 500),
     (G5, 500), (C6, 1000), (B5, 500),
@@ -309,7 +309,7 @@ melodia_wish_you_merry_christmas = [
     (B4, 500), (C5, 1000)
 ]
 
-# Ciclo infinito para esperar mensajes MQTT
+- Ciclo infinito para esperar mensajes MQTT
 while True:
     client.check_msg()  # Revisa si hay nuevos mensajes MQTT
 
