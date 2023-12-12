@@ -70,8 +70,9 @@ https://drive.google.com/file/d/1bGTcqEK-bOn_AY6Qf7bKaQIIcdedrDQd/view?usp=shari
 
 ## Imagenes 
 
-<img width="500" alt="Prototipo" src = "https://github.com/FerFoess/Personaje_IoT/assets/135056080/59fa7018-5c0a-4331-b6a3-714e08d930fa"> 
-<img width="500" alt="Prototipo" src = "https://github.com/FerFoess/Personaje_IoT/assets/135056080/39853035-9366-44de-9455-ca34759c9615"> 
+- <img width="500" alt="Prototipo" src = "https://github.com/FerFoess/Personaje_IoT/assets/135056080/59fa7018-5c0a-4331-b6a3-714e08d930fa"> 
+
+- <img width="500" alt="Prototipo" src = "https://github.com/FerFoess/Personaje_IoT/assets/135056080/39853035-9366-44de-9455-ca34759c9615"> 
 
 
 
